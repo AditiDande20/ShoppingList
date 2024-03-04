@@ -26,7 +26,7 @@ class _GroceryListScreenState extends State<GroceryListScreen> {
 
   void _loadItems() async {
     final url = Uri.https(
-        'flutterapps-fa725-default-rtdb.firebaseio.com', 'shopping-list.json');
+        'shoppinglist-914de-default-rtdb.firebaseio.com', 'shopping-list.json');
 
     try {
       final response = await http.get(url);
@@ -89,7 +89,7 @@ class _GroceryListScreenState extends State<GroceryListScreen> {
       _groceryItems.remove(item);
       _isLoading = false;
     });
-    final url = Uri.https('flutterapps-fa725-default-rtdb.firebaseio.com',
+    final url = Uri.https('shoppinglist-914de-default-rtdb.firebaseio.com',
         'shopping-list/${item.id}.json');
 
     final response = await http.delete(url);
@@ -129,25 +129,29 @@ class _GroceryListScreenState extends State<GroceryListScreen> {
           itemCount: _groceryItems.length,
           itemBuilder: (ctx, index) {
             return Dismissible(
-              key: ValueKey(_groceryItems[index].id),
-              onDismissed: (direction) {
-                _removeItem(_groceryItems[index]);
-              },
-              child: ListTile(
-                title: Text(
-                  _groceryItems[index].name,
-                  style: const TextStyle(
-                      fontSize: 16, fontWeight: FontWeight.normal),
-                ),
-                leading: Container(
-                  width: 24,
-                  height: 24,
-                  color: _groceryItems[index].category.color,
-                ),
-                trailing: Text(_groceryItems[index].quantity.toString(),style:  TextStyle(
-                      fontSize: 16, fontWeight: FontWeight.bold,color: _groceryItems[index].category.color),
-              ),)
-            );
+                key: ValueKey(_groceryItems[index].id),
+                onDismissed: (direction) {
+                  _removeItem(_groceryItems[index]);
+                },
+                child: ListTile(
+                  title: Text(
+                    _groceryItems[index].name,
+                    style: const TextStyle(
+                        fontSize: 16, fontWeight: FontWeight.normal),
+                  ),
+                  leading: Container(
+                    width: 24,
+                    height: 24,
+                    color: _groceryItems[index].category.color,
+                  ),
+                  trailing: Text(
+                    _groceryItems[index].quantity.toString(),
+                    style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: _groceryItems[index].category.color),
+                  ),
+                ));
           });
     }
     return Scaffold(

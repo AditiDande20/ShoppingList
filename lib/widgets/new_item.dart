@@ -28,7 +28,7 @@ class _NewItemState extends State<NewItem> {
       });
       _formKey.currentState!.save();
 
-      final url = Uri.https('flutterapps-fa725-default-rtdb.firebaseio.com',
+      final url = Uri.https('shoppinglist-914de-default-rtdb.firebaseio.com',
           'shopping-list.json');
       try {
         final response = await http.post(url,
@@ -101,7 +101,6 @@ class _NewItemState extends State<NewItem> {
                     decoration: const InputDecoration(
                       label: Text('Price', style: TextStyle(fontSize: 16)),
                     ),
-                    
                     keyboardType: TextInputType.phone,
                     validator: (value) {
                       if (value == null ||
