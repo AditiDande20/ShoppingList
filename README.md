@@ -1,16 +1,13 @@
-# shopping_list_app
+# Shopping List
 
-A new Flutter project.
+A simple shopping list app showcasing firebase create , delete and listing feature using http package. Below are the images and videos added.
 
-## Getting Started
+<p align="center">
+  <img src="https://github.com/AditiDande20/ShoppingList/assets/89302011/c8244e1c-f530-44ba-a953-9ff05d2e2510" width="350" height="500" title=""><br/><br/><br/><br/>
+  <img src="https://github.com/AditiDande20/ShoppingList/assets/89302011/2db96f54-b51d-43bd-a1df-14341438c368" width="350" height="500" title=""><br/><br/><br/><br/>
+  <img src="https://github.com/AditiDande20/ShoppingList/assets/89302011/58c61faf-f99c-49fb-9c50-2109b3082847" width="350" height="500" title=""><br/><br/><br/><br/>
+ 
+</p>
 
-This project is a starting point for a Flutter application.
+https://github.com/AditiDande20/ShoppingList/assets/89302011/8580bb38-96f4-41b0-a653-2378b3040c43
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
